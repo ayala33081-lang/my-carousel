@@ -1,10 +1,9 @@
 import Carousel from "./Carousel/Carousel";
 
 const images = [
-  "https://placehold.co/800x450/4f46e5/ffffff?text=1",
-  "https://placehold.co/800x450/0ea5e9/ffffff?text=2",
-  "https://placehold.co/800x450/10b981/ffffff?text=3",
-  "https://placehold.co/800x450/f59e0b/ffffff?text=4",
+  "/WhatsApp Image 2026-10-27 at 11.03.14.jpeg",
+  "/WhatsApp Image 2026-10-27 at 11.22.20.jpeg",
+  "/WhatsApp Image 2026-10-27 at 12.35.13 (1).jpeg"
 ];
 
 function App() {

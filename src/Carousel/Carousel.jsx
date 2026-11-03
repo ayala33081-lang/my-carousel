@@ -1,7 +1,14 @@
 import "./Carousel.css";
+import CarouselItem from "./CarouselItem";
 
-function Carousel() {
-  return <div className="carousel"></div>;
+function Carousel({ images = [], intervalSeconds = 3 }) {
+  return (
+    <div className="carousel">
+      {images.map((src, index) => (
+        <CarouselItem key={index} src={src} alt={`Slide ${index + 1}`} />
+      ))}
+    </div>
+  );
 }
 
 export default Carousel;
