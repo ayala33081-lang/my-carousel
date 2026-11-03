@@ -9,11 +9,11 @@ const [selected, setSelected] = useState(0);
       {images.map((src, index) => (index === selected) && (
         <CarouselItem key={index} src={src} alt={`Slide ${index + 1}`} />
       ))}
-      <div className="dots-carousel">
+      <div className="carousel-dots">
         {images.map((_, index) => (
           <button
             key={index}
-            className={index === selected ? "active dot-carousel" : "dot-carousel"}
+            className={index === selected ? "carousel-dot active" : "carousel-dot"}
             onClick={() => setSelected(index)}
           ></button>
         ))}
