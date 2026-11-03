@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./Carousel.css";
 import CarouselItem from "./CarouselItem";
 
@@ -7,6 +7,14 @@ const [selected, setSelected] = useState(0);
   function move(step) {
     setSelected((prev) => (prev + step+images.length)%images.length);
   }
+  useEffect(() => {
+  const interval = setInterval(() => {
+    move(1);
+  }, intervalSeconds * 1000);
+  return () => clearInterval(interval);
+},
+  [intervalSeconds, selected]
+);
     return (
     <div className="carousel">
       {images.map((src, index) => (index === selected) && (
